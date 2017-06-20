@@ -1,6 +1,6 @@
 # http://support.ghost.org/supported-node-versions/
 # https://github.com/nodejs/LTS
-FROM node:4-slim
+FROM pipill/armhf-node:4-slim
 
 RUN groupadd user && useradd --create-home --home-dir /home/user -g user user
 
@@ -25,6 +25,7 @@ RUN set -ex; \
 	\
 	buildDeps=' \
 		gcc \
+                g++ \
 		make \
 		python \
 		unzip \

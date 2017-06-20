@@ -1,6 +1,6 @@
 # http://support.ghost.org/supported-node-versions/
 # https://github.com/nodejs/LTS
-FROM node:4-alpine
+FROM pipill/armhf-node:4-alpine
 
 # grab su-exec for easy step-down from root
 RUN apk add --no-cache 'su-exec>=0.2'
@@ -21,6 +21,7 @@ RUN set -ex; \
 	apk add --no-cache --virtual .build-deps \
 		ca-certificates \
 		gcc \
+                g++ \
 		make \
 		openssl \
 		python \
